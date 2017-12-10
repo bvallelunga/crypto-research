@@ -37,16 +37,16 @@ contract HelloWorld {
   // [PART 8] Structs/Enums/Mappings.
 
   // [PART 9] The smart contract Constructor.
-  function HelloWorld() public{
+  function HelloWorld() public {
 
   }
 
   // [PART 10] Other functions.
-  function setGreeting(uint newGreeting) public{
+  function setGreeting(uint newGreeting) public {
     greeting = newGreeting;
   }
 
-  function getGreeting() public returns (uint) {
+  function getGreeting() public constant returns (uint) {
     return greeting;
   }
 

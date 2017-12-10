@@ -8,7 +8,7 @@ contract TestHelloWorld {
   HelloWorld helloWorld = HelloWorld(DeployedAddresses.HelloWorld());
 
   // Testing the adopt() function
-  function testSetGreeting() {
+  function testSetGreeting() public {
     uint i_returnedGreeting = helloWorld.getGreeting();
     Assert.isZero(i_returnedGreeting, "Get Greeting message expected to be 0, or undefined, initially.");
 
