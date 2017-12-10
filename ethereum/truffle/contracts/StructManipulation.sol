@@ -38,10 +38,6 @@ contract StructManipulation {
 
   // The following are numerous get functions for the current pipeline instance.
 
-  function getPipeline() public constant returns(Pipeline) {
-    return pipeline;
-  }
-
   function getPipelineDistributor() public constant returns(uint) {
     return pipeline.disributor;
   }

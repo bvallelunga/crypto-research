@@ -16,7 +16,7 @@
       "type": "function"
     },
     {
-      "constant": false,
+      "constant": true,
       "inputs": [],
       "name": "getGreeting",
       "outputs": [
@@ -26,7 +26,7 @@
         }
       ],
       "payable": false,
-      "stateMutability": "nonpayable",
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -60,18 +60,18 @@
       "type": "constructor"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b60d38061001d6000396000f3006060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063b201097814604e578063fe50cc7214606e575b600080fd5b3415605857600080fd5b606c60048080359060200190919050506094565b005b3415607857600080fd5b607e609e565b6040518082815260200191505060405180910390f35b8060008190555050565b600080549050905600a165627a7a72305820051294fba25a977aa9317b9298e7dfcc22c792f664171f2525c21e310eae1da60029",
-  "deployedBytecode": "0x6060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063b201097814604e578063fe50cc7214606e575b600080fd5b3415605857600080fd5b606c60048080359060200190919050506094565b005b3415607857600080fd5b607e609e565b6040518082815260200191505060405180910390f35b8060008190555050565b600080549050905600a165627a7a72305820051294fba25a977aa9317b9298e7dfcc22c792f664171f2525c21e310eae1da60029",
-  "sourceMap": "575:767:0:-;;;1078:34;;;;;;;;575:767;;;;;;",
-  "deployedSourceMap": "575:767:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1148:78;;;;;;;;;;;;;;;;;;;;;;;;;;1230:71;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1148:78;1210:11;1199:8;:22;;;;1148:78;:::o;1230:71::-;1269:4;1288:8;;1281:15;;1230:71;:::o",
-  "source": "/*\n  While this is obviously overkill for production code, I am going to use a\n  generous amount of comments with this first contract to establish the\n  reasoning behind certain choices and also highlight the basic structure\n  of a smart contract for anyone who may, in the future look at this crypto\n  research folder.\n*/\n\n// [PART 1] Specify which version of Solidity we want to use.\npragma solidity ^0.4.17;\n\n// [PART 2] Import other Sol files and smart contracts.\n\n// [PART 3] Title Comment\n/// @title Voting with delegation.\n\n// [PART 4] The contract class constructor.\ncontract HelloWorld {\n\n  /*\n    [PART 5] State Variables.\n\n    There are three basic parts to a state variable.\n\n    1) Type\n    2) Public/Private/External/Inherited\n    3) Variable Name\n  */\n  uint private greeting;\n\n  // [PART 6] Events.\n  // Used to log values in the interface, useful for debugging.\n\n  // [PART 7] Function Modifiers.\n  // Way to put restrictions on certain functions i.e. only owner can do x.\n\n  // [PART 8] Structs/Enums/Mappings.\n\n  // [PART 9] The smart contract Constructor.\n  function HelloWorld() public{\n\n  }\n\n  // [PART 10] Other functions.\n  function setGreeting(uint newGreeting) public{\n    greeting = newGreeting;\n  }\n\n  function getGreeting() public returns (uint) {\n    return greeting;\n  }\n\n  // [PART 11] The default function.\n\n}\n",
+  "bytecode": "0x6060604052341561000f57600080fd5b60d38061001d6000396000f3006060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063b201097814604e578063fe50cc7214606e575b600080fd5b3415605857600080fd5b606c60048080359060200190919050506094565b005b3415607857600080fd5b607e609e565b6040518082815260200191505060405180910390f35b8060008190555050565b600080549050905600a165627a7a7230582014e3ff554c5090bad8123b3640bc1a3392fe5abc93d9d8349fbe053d0d1dfb1e0029",
+  "deployedBytecode": "0x6060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063b201097814604e578063fe50cc7214606e575b600080fd5b3415605857600080fd5b606c60048080359060200190919050506094565b005b3415607857600080fd5b607e609e565b6040518082815260200191505060405180910390f35b8060008190555050565b600080549050905600a165627a7a7230582014e3ff554c5090bad8123b3640bc1a3392fe5abc93d9d8349fbe053d0d1dfb1e0029",
+  "sourceMap": "575:778:2:-;;;1078:35;;;;;;;;575:778;;;;;;",
+  "deployedSourceMap": "575:778:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1149:79;;;;;;;;;;;;;;;;;;;;;;;;;;1232:80;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1149:79;1212:11;1201:8;:22;;;;1149:79;:::o;1232:80::-;1280:4;1299:8;;1292:15;;1232:80;:::o",
+  "source": "/*\n  While this is obviously overkill for production code, I am going to use a\n  generous amount of comments with this first contract to establish the\n  reasoning behind certain choices and also highlight the basic structure\n  of a smart contract for anyone who may, in the future look at this crypto\n  research folder.\n*/\n\n// [PART 1] Specify which version of Solidity we want to use.\npragma solidity ^0.4.17;\n\n// [PART 2] Import other Sol files and smart contracts.\n\n// [PART 3] Title Comment\n/// @title Voting with delegation.\n\n// [PART 4] The contract class constructor.\ncontract HelloWorld {\n\n  /*\n    [PART 5] State Variables.\n\n    There are three basic parts to a state variable.\n\n    1) Type\n    2) Public/Private/External/Inherited\n    3) Variable Name\n  */\n  uint private greeting;\n\n  // [PART 6] Events.\n  // Used to log values in the interface, useful for debugging.\n\n  // [PART 7] Function Modifiers.\n  // Way to put restrictions on certain functions i.e. only owner can do x.\n\n  // [PART 8] Structs/Enums/Mappings.\n\n  // [PART 9] The smart contract Constructor.\n  function HelloWorld() public {\n\n  }\n\n  // [PART 10] Other functions.\n  function setGreeting(uint newGreeting) public {\n    greeting = newGreeting;\n  }\n\n  function getGreeting() public constant returns (uint) {\n    return greeting;\n  }\n\n  // [PART 11] The default function.\n\n}\n",
   "sourcePath": "/Users/rob/Desktop/crypto-research/ethereum/truffle/contracts/HelloWorld.sol",
   "ast": {
     "attributes": {
       "absolutePath": "/Users/rob/Desktop/crypto-research/ethereum/truffle/contracts/HelloWorld.sol",
       "exportedSymbols": {
         "HelloWorld": [
-          26
+          59
         ]
       }
     },
@@ -85,9 +85,9 @@
             ".17"
           ]
         },
-        "id": 1,
+        "id": 34,
         "name": "PragmaDirective",
-        "src": "386:24:0"
+        "src": "386:24:2"
       },
       {
         "attributes": {
@@ -101,17 +101,17 @@
           "documentation": "@title Voting with delegation.",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            26
+            59
           ],
           "name": "HelloWorld",
-          "scope": 27
+          "scope": 60
         },
         "children": [
           {
             "attributes": {
               "constant": false,
               "name": "greeting",
-              "scope": 26,
+              "scope": 59,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -124,14 +124,14 @@
                   "name": "uint",
                   "type": "uint256"
                 },
-                "id": 2,
+                "id": 35,
                 "name": "ElementaryTypeName",
-                "src": "769:4:0"
+                "src": "769:4:2"
               }
             ],
-            "id": 3,
+            "id": 36,
             "name": "VariableDeclaration",
-            "src": "769:21:0"
+            "src": "769:21:2"
           },
           {
             "attributes": {
@@ -143,7 +143,7 @@
               ],
               "name": "HelloWorld",
               "payable": false,
-              "scope": 26,
+              "scope": 59,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -178,9 +178,9 @@
                     "src": "1097:20:0"
                   }
                 ],
-                "id": 4,
+                "id": 37,
                 "name": "ParameterList",
-                "src": "1097:2:0",
+                "src": "1097:2:2",
                 "attributes": {
                   "parameters": [
                     null
@@ -194,9 +194,9 @@
                   ]
                 },
                 "children": [],
-                "id": 5,
+                "id": 38,
                 "name": "ParameterList",
-                "src": "1106:0:0"
+                "src": "1107:0:2"
               },
               {
                 "children": [
@@ -252,9 +252,9 @@
                     "src": "1131:26:0"
                   }
                 ],
-                "id": 6,
+                "id": 39,
                 "name": "Block",
-                "src": "1106:6:0",
+                "src": "1107:6:2",
                 "attributes": {
                   "statements": [
                     null
@@ -262,9 +262,9 @@
                 }
               }
             ],
-            "id": 7,
+            "id": 40,
             "name": "FunctionDefinition",
-            "src": "1078:34:0"
+            "src": "1078:35:2"
           },
           {
             "attributes": {
@@ -276,7 +276,7 @@
               ],
               "name": "setGreeting",
               "payable": false,
-              "scope": 26,
+              "scope": 59,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -288,7 +288,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "newGreeting",
-                      "scope": 17,
+                      "scope": 50,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -301,19 +301,19 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 8,
+                        "id": 41,
                         "name": "ElementaryTypeName",
-                        "src": "1169:4:0"
+                        "src": "1170:4:2"
                       }
                     ],
-                    "id": 9,
+                    "id": 42,
                     "name": "VariableDeclaration",
-                    "src": "1169:16:0"
+                    "src": "1170:16:2"
                   }
                 ],
-                "id": 10,
+                "id": 43,
                 "name": "ParameterList",
-                "src": "1168:18:0"
+                "src": "1169:18:2"
               },
               {
                 "attributes": {
@@ -322,9 +322,9 @@
                   ]
                 },
                 "children": [],
-                "id": 11,
+                "id": 44,
                 "name": "ParameterList",
-                "src": "1193:0:0"
+                "src": "1195:0:2"
               },
               {
                 "children": [
@@ -347,13 +347,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 3,
+                              "referencedDeclaration": 36,
                               "type": "uint256",
                               "value": "greeting"
                             },
-                            "id": 12,
+                            "id": 45,
                             "name": "Identifier",
-                            "src": "1199:8:0"
+                            "src": "1201:8:2"
                           },
                           {
                             "attributes": {
@@ -361,37 +361,37 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 9,
+                              "referencedDeclaration": 42,
                               "type": "uint256",
                               "value": "newGreeting"
                             },
-                            "id": 13,
+                            "id": 46,
                             "name": "Identifier",
-                            "src": "1210:11:0"
+                            "src": "1212:11:2"
                           }
                         ],
-                        "id": 14,
+                        "id": 47,
                         "name": "Assignment",
-                        "src": "1199:22:0"
+                        "src": "1201:22:2"
                       }
                     ],
-                    "id": 15,
+                    "id": 48,
                     "name": "ExpressionStatement",
-                    "src": "1199:22:0"
+                    "src": "1201:22:2"
                   }
                 ],
-                "id": 16,
+                "id": 49,
                 "name": "Block",
-                "src": "1193:33:0"
+                "src": "1195:33:2"
               }
             ],
-            "id": 17,
+            "id": 50,
             "name": "FunctionDefinition",
-            "src": "1148:78:0"
+            "src": "1149:79:2"
           },
           {
             "attributes": {
-              "constant": false,
+              "constant": true,
               "implemented": true,
               "isConstructor": false,
               "modifiers": [
@@ -399,8 +399,8 @@
               ],
               "name": "getGreeting",
               "payable": false,
-              "scope": 26,
-              "stateMutability": "nonpayable",
+              "scope": 59,
+              "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
             },
@@ -412,9 +412,9 @@
                   ]
                 },
                 "children": [],
-                "id": 18,
+                "id": 51,
                 "name": "ParameterList",
-                "src": "1250:2:0"
+                "src": "1252:2:2"
               },
               {
                 "children": [
@@ -422,7 +422,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 25,
+                      "scope": 58,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -435,25 +435,25 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 19,
+                        "id": 52,
                         "name": "ElementaryTypeName",
-                        "src": "1269:4:0"
+                        "src": "1280:4:2"
                       }
                     ],
-                    "id": 20,
+                    "id": 53,
                     "name": "VariableDeclaration",
-                    "src": "1269:4:0"
+                    "src": "1280:4:2"
                   }
                 ],
-                "id": 21,
+                "id": 54,
                 "name": "ParameterList",
-                "src": "1268:6:0"
+                "src": "1279:6:2"
               },
               {
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 21
+                      "functionReturnParameters": 54
                     },
                     "children": [
                       {
@@ -462,38 +462,38 @@
                           "overloadedDeclarations": [
                             null
                           ],
-                          "referencedDeclaration": 3,
+                          "referencedDeclaration": 36,
                           "type": "uint256",
                           "value": "greeting"
                         },
-                        "id": 22,
+                        "id": 55,
                         "name": "Identifier",
-                        "src": "1288:8:0"
+                        "src": "1299:8:2"
                       }
                     ],
-                    "id": 23,
+                    "id": 56,
                     "name": "Return",
-                    "src": "1281:15:0"
+                    "src": "1292:15:2"
                   }
                 ],
-                "id": 24,
+                "id": 57,
                 "name": "Block",
-                "src": "1275:26:0"
+                "src": "1286:26:2"
               }
             ],
-            "id": 25,
+            "id": 58,
             "name": "FunctionDefinition",
-            "src": "1230:71:0"
+            "src": "1232:80:2"
           }
         ],
-        "id": 26,
+        "id": 59,
         "name": "ContractDefinition",
-        "src": "575:767:0"
+        "src": "575:778:2"
       }
     ],
-    "id": 27,
+    "id": 60,
     "name": "SourceUnit",
-    "src": "386:957:0"
+    "src": "386:968:2"
   },
   "compiler": {
     "name": "solc",
@@ -517,5 +517,5 @@
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2017-12-10T02:36:28.687Z"
+  "updatedAt": "2017-12-10T18:47:15.386Z"
 }
