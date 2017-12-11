@@ -12,7 +12,7 @@ pragma solidity ^0.4.17;
 // [PART 2] Import other Sol files and smart contracts.
 
 // [PART 3] Title Comment
-/// @title Voting with delegation.
+/// @title Hello World
 
 // [PART 4] The contract class constructor.
 contract HelloWorld {
