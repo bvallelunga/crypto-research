@@ -8,7 +8,9 @@ b) StructManipulation -- demonstrate how to instantiate a struct <br/>
 c) MappingDemo -- demonstrate how insert/delete/get a mapping <br/>
 d) ContractToContract1 (receiving contract) -- demonstrate contract to contract interaction <br/>
 e) ContractToContract2 (sending contract) -- demonstrate contract to contract interaction <br/>
-f) StructPlusMapping -- demonstrate a combination of mapping and struct
+f) StructPlusMapping -- demonstrate a combination of mapping and struct <br/>
+g) DopplerDistributionFunnel_v0 -- Version 0 of the distribution payment routing contract setup by the Doppler Foundation <br/>
+h) DopplerSubLevelDistributionContract_v0 -- Version 0 of the multi-use contract for Providers, Contributors, and App Owners <br/>
 
 Install the NPM package.
 ```
@@ -33,9 +35,10 @@ test
 - [x] Mapping
 - [x] Contract to Contract
 - [x] Mapping and Struct
-- [ ] Mapping and Struct with addresses
-- [ ] Mapping and Struct with addresses Contract to Contract (FULL)
-- [ ] Proper types (FULL)
-- [ ] Modifiers (FULL)
-- [ ] Events (FULL)
-- [ ] TBD
+- [x] Mapping and Struct with addresses
+- [x] Mapping and Struct with addresses Contract to Contract
+- [ ] Proper types (w/ correct private/public/external/internal)
+- [ ] Modifiers
+- [ ] Events
+- [ ] Send Payments
+- [ ] Proper Percentages by sublevel contract

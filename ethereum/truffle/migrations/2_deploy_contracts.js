@@ -4,7 +4,7 @@ var ContractToContract1 = artifacts.require("ContractToContract1");
 var ContractToContract2 = artifacts.require("ContractToContract2");
 var MappingDemo = artifacts.require("MappingDemo");
 var StructPlusMapping = artifacts.require("StructPlusMapping");
-var DopplerDistributionFunnel = artifacts.require("DopplerDistributionFunnel");
+var DopplerDistributionFunnel_v0 = artifacts.require("DopplerDistributionFunnel_v0");
 
 
 module.exports = function(deployer) {
@@ -14,5 +14,5 @@ module.exports = function(deployer) {
   deployer.deploy(ContractToContract2);
   deployer.deploy(MappingDemo);
   deployer.deploy(StructPlusMapping);
-  deployer.deploy(DopplerDistributionFunnel);
+  deployer.deploy(DopplerDistributionFunnel_v0);
 };

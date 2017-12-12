@@ -10,12 +10,14 @@
 pragma solidity ^0.4.17;
 
 // [PART 2] Import other Sol files and smart contracts.
+// Sublevel contract for second level distribution.
+import './DopplerSubLevelDistributionContract_v0.sol';
 
 // [PART 3] Title Comment
 /// @title Dopple Distribution Funnel
 
 // [PART 4] The contract class constructor.
-contract DopplerDistributionFunnel {
+contract DopplerDistributionFunnel_v0 {
 
   // [PART 5] State Variables.
 
@@ -49,9 +51,9 @@ contract DopplerDistributionFunnel {
     4) Doppler Foundation
   */
   struct Pipeline {
-    address provider;
-    address contributor;
-    address appOwner;
+    DopplerSubLevelDistributionContract_v0 provider;
+    DopplerSubLevelDistributionContract_v0 contributor;
+    DopplerSubLevelDistributionContract_v0 appOwner;
 
     uint providerPercent;
     uint contributorPercent;
@@ -89,7 +91,7 @@ contract DopplerDistributionFunnel {
 
 
   // [PART 9] The smart contract Constructor.
-  function DopplerDistributionFunnel() public {
+  function DopplerDistributionFunnel_v0() public {
     // The creator of the contract is the Doppler Foundation.
     DopplerFoundation = msg.sender;
   }
@@ -97,11 +99,16 @@ contract DopplerDistributionFunnel {
   // [PART 10] Other functions.
 
   // Create a new pipeline.
-  function createPipeline(uint pipelineIdentifier, address providerContract,
-    address contributorContract, address appOwnerContract, uint providerPercentNum,
+  function createPipeline(uint pipelineIdentifier, address providerContractAddress,
+    address contributorContractAddress, address appOwnerContractAddress, uint providerPercentNum,
     uint contributorPercentNum, uint appOwnerPercentNum) {
     /*require(msg.sender == DopplerFoundation);*/
     /*require(providerPercentNum + contributorPercentNum + appOwnerPercentNum <= 100);*/
+
+    DopplerSubLevelDistributionContract_v0 providerContract = DopplerSubLevelDistributionContract_v0(providerContractAddress);
+    DopplerSubLevelDistributionContract_v0 contributorContract = DopplerSubLevelDistributionContract_v0(contributorContractAddress);
+    DopplerSubLevelDistributionContract_v0 appOwnerContract = DopplerSubLevelDistributionContract_v0(appOwnerContractAddress);
+
     pipelineMapping[pipelineIdentifier] = Pipeline(
       {
         provider: providerContract,
@@ -115,9 +122,8 @@ contract DopplerDistributionFunnel {
   }
 
   // Creates a payment object and holds it in escrow while waiting for the result.
-  function createPayment(uint _pipelineId) public payable{
+  function createPayment(uint _pipelineId, uint amountSent) public payable{
     address userAddr = msg.sender;
-    uint amountSent = msg.value;
     uint pipelineIdentifier = _pipelineId;
 
     // If user already has a payment, delete it
@@ -135,7 +141,7 @@ contract DopplerDistributionFunnel {
   }
 
   // Returns payment info for a given user.
-  function getPaymentById() public returns(uint, uint) {
+  function getUserPayment() public returns(uint, uint) {
     address userAddr = msg.sender;
     return (escrowMapping[userAddr].amount, escrowMapping[userAddr].pipelineId);
   }
@@ -143,24 +149,33 @@ contract DopplerDistributionFunnel {
   // Finds the payment object in question and then distributes the
   // payment based on the result.
   // TODO: require that a trusted source made this request.
-  function distributePayment(address userAddress) public {
-    address userAddr = userAddress;
+  function distributePayment() public {
+    address userAddr = msg.sender;
+
     Payment storage paymentObj = escrowMapping[userAddr];
+
     uint amount = paymentObj.amount;
     uint pipelineId = paymentObj.pipelineId;
+
     Pipeline storage pipeline = pipelineMapping[pipelineId];
 
     // Calculate the amount each member of the pipeline receives.
-    uint amountProvider = amount - (amount * pipeline.providerPercent);
-    uint amountContributor = amount - (amount * pipeline.contributorPercent);
-    uint amountAppOwner = amount - (amount * pipeline.appOwnerPercent);
+    uint amountProvider = (pipeline.providerPercent);
+    amount -= amountProvider;
+    uint amountContributor = (pipeline.contributorPercent);
+    amount -= amountContributor;
+    uint amountAppOwner = (pipeline.appOwnerPercent);
+    amount -= amountAppOwner;
     uint amountFoundation = amount;
 
     // Distribute the funds.
-    pipeline.provider.transfer(amountProvider);
-    pipeline.contributor.transfer(amountContributor);
-    pipeline.appOwner.transfer(amountAppOwner);
-    DopplerFoundation.transfer(amountFoundation);
+    pipeline.provider.acceptDOP(amountProvider);
+    pipeline.contributor.acceptDOP(amountContributor);
+    pipeline.appOwner.acceptDOP(amountAppOwner);
+    /*DopplerFoundation.transfer(amountFoundation);*/
+
+    // Delete the pending payment from escrowMapping.
+    delete escrowMapping[userAddr];
   }
 
   // [PART 11] The default function.
