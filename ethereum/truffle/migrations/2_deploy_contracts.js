@@ -7,6 +7,7 @@ var StructPlusMapping = artifacts.require("StructPlusMapping");
 var DopplerDistributionFunnel_v0 = artifacts.require("DopplerDistributionFunnel_v0");
 var Payments = artifacts.require("Payments");
 var Modifiers = artifacts.require("Modifiers");
+var DopplerDistributionFunnel_v1 = artifacts.require("DopplerDistributionFunnel_v1");
 
 
 module.exports = function(deployer) {
@@ -19,4 +20,5 @@ module.exports = function(deployer) {
   deployer.deploy(DopplerDistributionFunnel_v0);
   deployer.deploy(Payments);
   deployer.deploy(Modifiers);
+  deployer.deploy(DopplerDistributionFunnel_v1);
 };
