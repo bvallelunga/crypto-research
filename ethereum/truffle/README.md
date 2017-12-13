@@ -11,6 +11,8 @@ As of right now, it looks like Truffle is a great framework for building and tes
 6. StructPlusMapping -- demonstrate a combination of mapping and struct <br/>
 7. DopplerDistributionFunnel_v0 -- Version 0 of the distribution payment routing contract setup by the Doppler Foundation <br/>
 8. DopplerSubLevelDistributionContract_v0 -- Version 0 of the multi-use contract for Providers, Contributors, and App Owners <br/>
+9. Payments -- demonstrate how payable functions work
+10. Modifiers -- demonstrate how modifiers work on functions
 
 Install the NPM package.
 ```
@@ -38,7 +40,8 @@ test
 - [x] Mapping and Struct with addresses
 - [x] Mapping and Struct with addresses Contract to Contract
 - [ ] Proper types (w/ correct private/public/external/internal)
-- [ ] Modifiers
+- [x] Modifiers
 - [ ] Events
-- [ ] Send Payments
+- [x] Send Payments
 - [ ] Proper Percentages by sublevel contract
+- [ ] Prevent reentrancy: Reference: http://bit.ly/2nUbR8d

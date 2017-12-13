@@ -505,6 +505,11 @@
       "links": {},
       "address": "0x345ca3e014aaf5dca488057592ee47305d9b3e10"
     },
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xbaaa2a3237035a2c7fa2a33c76b44a8c6fe18e87"
+    },
     "1512852469353": {
       "events": {},
       "links": {},
@@ -517,5 +522,5 @@
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2017-12-12T04:52:44.734Z"
+  "updatedAt": "2017-12-13T04:18:01.898Z"
 }
