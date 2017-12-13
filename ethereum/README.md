@@ -64,7 +64,7 @@ eth.getBalance(eth.accounts[0])
 Exactly the same as above except run the following to install all the stuff:
 
 Prerequisites:
-a) [brew](https://brew.sh/)
+1. [brew](https://brew.sh/)
 
 #### Install brew
 ```
