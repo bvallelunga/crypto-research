@@ -45,3 +45,5 @@ test
 - [x] Send Payments
 - [ ] Proper Percentages by sublevel contract
 - [ ] Prevent reentrancy: Reference: http://bit.ly/2nUbR8d
+- [ ] Distribution from Sub Level contracts
+- [x] Send money &rarr; Mapping and Struct with addresses Contract to Contract
