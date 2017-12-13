@@ -31,15 +31,6 @@ contract DopplerDistributionFunnel_v0 {
   // [PART 7] Function Modifiers.
 
   // [PART 8] Structs/Enums/Mappings.
-
-  // The possible outcomes for a prediction.
-  enum PredictionOutcome {
-    SUCCESSFUL,
-    ROUND_1_FAIL,
-    FAIL,
-    ELSE
-  }
-
   /*
     A Pipeline is an object that holds the addresses of the
     different parts of a single payment funnel. Each payment
