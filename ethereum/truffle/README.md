@@ -11,8 +11,10 @@ As of right now, it looks like Truffle is a great framework for building and tes
 6. StructPlusMapping -- demonstrate a combination of mapping and struct <br/>
 7. DopplerDistributionFunnel_v0 -- Version 0 of the distribution payment routing contract setup by the Doppler Foundation <br/>
 8. DopplerSubLevelDistributionContract_v0 -- Version 0 of the multi-use contract for Providers, Contributors, and App Owners <br/>
-9. Payments -- demonstrate how payable functions work
-10. Modifiers -- demonstrate how modifiers work on functions
+9. Payments -- demonstrate how payable functions work <br />
+10. Modifiers -- demonstrate how modifiers work on functions <br />
+11. DopplerSubLevelDistributionContract_v1 -- distribute money down the entire pipeline <br/>
+12. DopplerSubLevelDistributionContract_v2 -- distribute money based on consensus result <br/>
 
 Install the NPM package.
 ```
@@ -31,7 +33,7 @@ migrate
 test
 ```
 
-### Milestone List
+### Milestone List (12/20)
 - [x] Hello World Contract
 - [x] Structs
 - [x] Mapping
@@ -39,11 +41,16 @@ test
 - [x] Mapping and Struct
 - [x] Mapping and Struct with addresses
 - [x] Mapping and Struct with addresses Contract to Contract
-- [ ] Proper types (w/ correct private/public/external/internal)
 - [x] Modifiers
-- [ ] Events
 - [x] Send Payments
-- [ ] Proper Percentages by sublevel contract
-- [ ] Prevent reentrancy: Reference: http://bit.ly/2nUbR8d
-- [ ] Distribution from Sub Level contracts
+- [x] Distribution from Sub Level contracts
 - [x] Send money &rarr; Mapping and Struct with addresses Contract to Contract
+- [x] Distribute based on prediction result
+- [ ] Events
+- [ ] Proper types (w/ correct private/public/external/internal)
+- [ ] Dynamically sized arrays for sub level contracts user arrays
+- [ ] Proper Percentages by sublevel contract
+- [ ] Enums
+- [ ] Send payment to external Doppler Foundation address
+- [ ] Actually refund payment back to user
+- [ ] DOP ICO contract

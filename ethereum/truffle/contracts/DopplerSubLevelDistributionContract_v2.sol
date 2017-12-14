@@ -6,7 +6,7 @@
 /// @title Dopple Distribution Sub Level
 pragma solidity ^0.4.17;
 
-contract DopplerSubLevelDistributionContract_v1 {
+contract DopplerSubLevelDistributionContract_v2 {
 
   // Define state variables
   address[4] usersToPay;
@@ -18,7 +18,7 @@ contract DopplerSubLevelDistributionContract_v1 {
       }
   }
 
-  function DopplerSubLevelDistributionContract_v1(address[4] users) {
+  function DopplerSubLevelDistributionContract_v2(address[4] users) {
     usersToPay = users;
   }
 
