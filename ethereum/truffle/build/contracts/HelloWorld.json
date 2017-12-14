@@ -60,18 +60,18 @@
       "type": "constructor"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b60d38061001d6000396000f3006060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063b201097814604e578063fe50cc7214606e575b600080fd5b3415605857600080fd5b606c60048080359060200190919050506094565b005b3415607857600080fd5b607e609e565b6040518082815260200191505060405180910390f35b8060008190555050565b600080549050905600a165627a7a7230582066d948a53ce2dac996b0b5573c821212077194f56af82b139af8eae23ca0abbd0029",
-  "deployedBytecode": "0x6060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063b201097814604e578063fe50cc7214606e575b600080fd5b3415605857600080fd5b606c60048080359060200190919050506094565b005b3415607857600080fd5b607e609e565b6040518082815260200191505060405180910390f35b8060008190555050565b600080549050905600a165627a7a7230582066d948a53ce2dac996b0b5573c821212077194f56af82b139af8eae23ca0abbd0029",
-  "sourceMap": "563:778:1:-;;;1066:35;;;;;;;;563:778;;;;;;",
-  "deployedSourceMap": "563:778:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1137:79;;;;;;;;;;;;;;;;;;;;;;;;;;1220:80;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1137:79;1200:11;1189:8;:22;;;;1137:79;:::o;1220:80::-;1268:4;1287:8;;1280:15;;1220:80;:::o",
+  "bytecode": "0x6060604052341561000f57600080fd5b60d38061001d6000396000f3006060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063b201097814604e578063fe50cc7214606e575b600080fd5b3415605857600080fd5b606c60048080359060200190919050506094565b005b3415607857600080fd5b607e609e565b6040518082815260200191505060405180910390f35b8060008190555050565b600080549050905600a165627a7a72305820a57dcbb5a567a6ec4477efb87af5f4a7d8b9ca638cb863929ef8b00f5ed824590029",
+  "deployedBytecode": "0x6060604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063b201097814604e578063fe50cc7214606e575b600080fd5b3415605857600080fd5b606c60048080359060200190919050506094565b005b3415607857600080fd5b607e609e565b6040518082815260200191505060405180910390f35b8060008190555050565b600080549050905600a165627a7a72305820a57dcbb5a567a6ec4477efb87af5f4a7d8b9ca638cb863929ef8b00f5ed824590029",
+  "sourceMap": "563:778:5:-;;;1066:35;;;;;;;;563:778;;;;;;",
+  "deployedSourceMap": "563:778:5:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1137:79;;;;;;;;;;;;;;;;;;;;;;;;;;1220:80;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1137:79;1200:11;1189:8;:22;;;;1137:79;:::o;1220:80::-;1268:4;1287:8;;1280:15;;1220:80;:::o",
   "source": "/*\n  While this is obviously overkill for production code, I am going to use a\n  generous amount of comments with this first contract to establish the\n  reasoning behind certain choices and also highlight the basic structure\n  of a smart contract for anyone who may, in the future look at this crypto\n  research folder.\n*/\n\n// [PART 1] Specify which version of Solidity we want to use.\npragma solidity ^0.4.17;\n\n// [PART 2] Import other Sol files and smart contracts.\n\n// [PART 3] Title Comment\n/// @title Hello World\n\n// [PART 4] The contract class constructor.\ncontract HelloWorld {\n\n  /*\n    [PART 5] State Variables.\n\n    There are three basic parts to a state variable.\n\n    1) Type\n    2) Public/Private/External/Inherited\n    3) Variable Name\n  */\n  uint private greeting;\n\n  // [PART 6] Events.\n  // Used to log values in the interface, useful for debugging.\n\n  // [PART 7] Function Modifiers.\n  // Way to put restrictions on certain functions i.e. only owner can do x.\n\n  // [PART 8] Structs/Enums/Mappings.\n\n  // [PART 9] The smart contract Constructor.\n  function HelloWorld() public {\n\n  }\n\n  // [PART 10] Other functions.\n  function setGreeting(uint newGreeting) public {\n    greeting = newGreeting;\n  }\n\n  function getGreeting() public constant returns (uint) {\n    return greeting;\n  }\n\n  // [PART 11] The default function.\n\n}\n",
-  "sourcePath": "/Users/rob/Desktop/crypto-research/ethereum/truffle/contracts/HelloWorld.sol",
+  "sourcePath": "/Users/androswong/crypto-research/ethereum/truffle/contracts/HelloWorld.sol",
   "ast": {
     "attributes": {
-      "absolutePath": "/Users/rob/Desktop/crypto-research/ethereum/truffle/contracts/HelloWorld.sol",
+      "absolutePath": "/Users/androswong/crypto-research/ethereum/truffle/contracts/HelloWorld.sol",
       "exportedSymbols": {
         "HelloWorld": [
-          214
+          529
         ]
       }
     },
@@ -85,9 +85,9 @@
             ".17"
           ]
         },
-        "id": 189,
+        "id": 504,
         "name": "PragmaDirective",
-        "src": "386:24:1"
+        "src": "386:24:5"
       },
       {
         "attributes": {
@@ -101,17 +101,17 @@
           "documentation": "@title Hello World",
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            214
+            529
           ],
           "name": "HelloWorld",
-          "scope": 215
+          "scope": 530
         },
         "children": [
           {
             "attributes": {
               "constant": false,
               "name": "greeting",
-              "scope": 214,
+              "scope": 529,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -124,14 +124,14 @@
                   "name": "uint",
                   "type": "uint256"
                 },
-                "id": 190,
+                "id": 505,
                 "name": "ElementaryTypeName",
-                "src": "757:4:1"
+                "src": "757:4:5"
               }
             ],
-            "id": 191,
+            "id": 506,
             "name": "VariableDeclaration",
-            "src": "757:21:1"
+            "src": "757:21:5"
           },
           {
             "attributes": {
@@ -143,7 +143,7 @@
               ],
               "name": "HelloWorld",
               "payable": false,
-              "scope": 214,
+              "scope": 529,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -178,9 +178,9 @@
                     "src": "1097:20:0"
                   }
                 ],
-                "id": 192,
+                "id": 507,
                 "name": "ParameterList",
-                "src": "1085:2:1",
+                "src": "1085:2:5",
                 "attributes": {
                   "parameters": [
                     null
@@ -194,9 +194,9 @@
                   ]
                 },
                 "children": [],
-                "id": 193,
+                "id": 508,
                 "name": "ParameterList",
-                "src": "1095:0:1"
+                "src": "1095:0:5"
               },
               {
                 "children": [
@@ -252,9 +252,9 @@
                     "src": "1131:26:0"
                   }
                 ],
-                "id": 194,
+                "id": 509,
                 "name": "Block",
-                "src": "1095:6:1",
+                "src": "1095:6:5",
                 "attributes": {
                   "statements": [
                     null
@@ -262,9 +262,9 @@
                 }
               }
             ],
-            "id": 195,
+            "id": 510,
             "name": "FunctionDefinition",
-            "src": "1066:35:1"
+            "src": "1066:35:5"
           },
           {
             "attributes": {
@@ -276,7 +276,7 @@
               ],
               "name": "setGreeting",
               "payable": false,
-              "scope": 214,
+              "scope": 529,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -288,7 +288,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "newGreeting",
-                      "scope": 205,
+                      "scope": 520,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -301,19 +301,19 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 196,
+                        "id": 511,
                         "name": "ElementaryTypeName",
-                        "src": "1158:4:1"
+                        "src": "1158:4:5"
                       }
                     ],
-                    "id": 197,
+                    "id": 512,
                     "name": "VariableDeclaration",
-                    "src": "1158:16:1"
+                    "src": "1158:16:5"
                   }
                 ],
-                "id": 198,
+                "id": 513,
                 "name": "ParameterList",
-                "src": "1157:18:1"
+                "src": "1157:18:5"
               },
               {
                 "attributes": {
@@ -322,9 +322,9 @@
                   ]
                 },
                 "children": [],
-                "id": 199,
+                "id": 514,
                 "name": "ParameterList",
-                "src": "1183:0:1"
+                "src": "1183:0:5"
               },
               {
                 "children": [
@@ -347,13 +347,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 191,
+                              "referencedDeclaration": 506,
                               "type": "uint256",
                               "value": "greeting"
                             },
-                            "id": 200,
+                            "id": 515,
                             "name": "Identifier",
-                            "src": "1189:8:1"
+                            "src": "1189:8:5"
                           },
                           {
                             "attributes": {
@@ -361,33 +361,33 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 197,
+                              "referencedDeclaration": 512,
                               "type": "uint256",
                               "value": "newGreeting"
                             },
-                            "id": 201,
+                            "id": 516,
                             "name": "Identifier",
-                            "src": "1200:11:1"
+                            "src": "1200:11:5"
                           }
                         ],
-                        "id": 202,
+                        "id": 517,
                         "name": "Assignment",
-                        "src": "1189:22:1"
+                        "src": "1189:22:5"
                       }
                     ],
-                    "id": 203,
+                    "id": 518,
                     "name": "ExpressionStatement",
-                    "src": "1189:22:1"
+                    "src": "1189:22:5"
                   }
                 ],
-                "id": 204,
+                "id": 519,
                 "name": "Block",
-                "src": "1183:33:1"
+                "src": "1183:33:5"
               }
             ],
-            "id": 205,
+            "id": 520,
             "name": "FunctionDefinition",
-            "src": "1137:79:1"
+            "src": "1137:79:5"
           },
           {
             "attributes": {
@@ -399,7 +399,7 @@
               ],
               "name": "getGreeting",
               "payable": false,
-              "scope": 214,
+              "scope": 529,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -412,9 +412,9 @@
                   ]
                 },
                 "children": [],
-                "id": 206,
+                "id": 521,
                 "name": "ParameterList",
-                "src": "1240:2:1"
+                "src": "1240:2:5"
               },
               {
                 "children": [
@@ -422,7 +422,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 213,
+                      "scope": 528,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -435,25 +435,25 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 207,
+                        "id": 522,
                         "name": "ElementaryTypeName",
-                        "src": "1268:4:1"
+                        "src": "1268:4:5"
                       }
                     ],
-                    "id": 208,
+                    "id": 523,
                     "name": "VariableDeclaration",
-                    "src": "1268:4:1"
+                    "src": "1268:4:5"
                   }
                 ],
-                "id": 209,
+                "id": 524,
                 "name": "ParameterList",
-                "src": "1267:6:1"
+                "src": "1267:6:5"
               },
               {
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 209
+                      "functionReturnParameters": 524
                     },
                     "children": [
                       {
@@ -462,38 +462,38 @@
                           "overloadedDeclarations": [
                             null
                           ],
-                          "referencedDeclaration": 191,
+                          "referencedDeclaration": 506,
                           "type": "uint256",
                           "value": "greeting"
                         },
-                        "id": 210,
+                        "id": 525,
                         "name": "Identifier",
-                        "src": "1287:8:1"
+                        "src": "1287:8:5"
                       }
                     ],
-                    "id": 211,
+                    "id": 526,
                     "name": "Return",
-                    "src": "1280:15:1"
+                    "src": "1280:15:5"
                   }
                 ],
-                "id": 212,
+                "id": 527,
                 "name": "Block",
-                "src": "1274:26:1"
+                "src": "1274:26:5"
               }
             ],
-            "id": 213,
+            "id": 528,
             "name": "FunctionDefinition",
-            "src": "1220:80:1"
+            "src": "1220:80:5"
           }
         ],
-        "id": 214,
+        "id": 529,
         "name": "ContractDefinition",
-        "src": "563:778:1"
+        "src": "563:778:5"
       }
     ],
-    "id": 215,
+    "id": 530,
     "name": "SourceUnit",
-    "src": "386:956:1"
+    "src": "386:956:5"
   },
   "compiler": {
     "name": "solc",
@@ -522,5 +522,5 @@
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2017-12-13T04:18:01.898Z"
+  "updatedAt": "2017-12-13T08:56:34.905Z"
 }
