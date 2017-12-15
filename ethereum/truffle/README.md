@@ -54,3 +54,15 @@ test
 - [ ] Send payment to external Doppler Foundation address
 - [ ] Actually refund payment back to user
 - [ ] DOP ICO contract
+
+### Conclusion
+We were able to create a full pipeline smart contract architecture for the payment distribution of one task.
+We created a Distribution contract that stored 'Pipelines' which consisted of structs containing addresses to
+a certain task's Provider, Contributor, and App Owner sub level contracts. The Distribution contract received
+payment from a user along with the Pipeline id -- it mapped the user's address to a payment struct containing
+the payment information. Then, upon a distribution command with the outcome as input, the contract would send
+the proper payment amount to the sub level contracts as well as the Doppler Foundation. These sub level contracts
+would finally distribute funds to the appropriate recipients, whom it would have stored in an array.
+
+We deem this test a success. While what we have built is by no means production code, we are fully confident that
+utilization of this blockchain and this smart contract architecture fits the Doppler Foundation's needs.
