@@ -1,11 +1,11 @@
-#POC1: Escrow
+# POC1: Escrow
 **Overview:**  This complicated payment distribution pipeline will utilize a central contract to deal with everything related to payment. It will hold the user's payment in escrow and it will distribute the payment to subLevelContracts based on the prediction outcome.<br>
 
 ## Contracts
 1. Distributor
-2. ProviderC
-3. ContributorC
-4. AppOwnerC
+2. ProviderC (SubLevelC)
+3. ContributorC (SubLevelC)
+4. AppOwnerC (SubLevelC)
 
 ## Process
 1. *User* sends funds to *DistributorC* with a temporary escrow ID and a task ID. The temporary escrow ID will be generated client side. The task ID will reference an already instantiated task whose ID is able to be looked up. This task ID references a struct within *DistributorC* which references a ProviderC, a ContributorC, a AppOwnerC, and the percentages these entities receive of the user's payment.

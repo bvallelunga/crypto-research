@@ -1,0 +1,536 @@
+{
+  "contractName": "SubLevelC",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "name": "owner",
+          "type": "address[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "constant": false,
+      "name": "returnOwners",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address[]"
+        }
+      ]
+    },
+    {
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor",
+      "inputs": [
+        {
+          "name": "owner",
+          "type": "address[]"
+        }
+      ]
+    }
+  ],
+  "bytecode": "0x606060405260016040518059106100135750595b90808252806020026020018201604052506000908051906020019061003992919061007e565b50341561004557600080fd5b6040516102de3803806102de83398101604052808051820191905050806000908051906020019061007792919061007e565b505061014b565b8280548282559060005260206000209081019282156100f7579160200282015b828111156100f65782518260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055509160200191906001019061009e565b5b5090506101049190610108565b5090565b61014891905b8082111561014457600081816101000a81549073ffffffffffffffffffffffffffffffffffffffff02191690555060010161010e565b5090565b90565b6101848061015a6000396000f300606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063dde9394c14610046575b600080fd5b341561005157600080fd5b6100596100b0565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b8381101561009c578082015181840152602081019050610081565b505050509050019250505060405180910390f35b6100b8610144565b600080548060200260200160405190810160405280929190818152602001828054801561013a57602002820191906000526020600020905b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190600101908083116100f0575b5050505050905090565b6020604051908101604052806000815250905600a165627a7a723058203907f4fdc759d8d37cd07ecaf30d27c04681c02078e0259ffed8805456f813080029",
+  "deployedBytecode": "0x606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063dde9394c14610046575b600080fd5b341561005157600080fd5b6100596100b0565b6040518080602001828103825283818151815260200191508051906020019060200280838360005b8381101561009c578082015181840152602081019050610081565b505050509050019250505060405180910390f35b6100b8610144565b600080548060200260200160405190810160405280929190818152602001828054801561013a57602002820191906000526020600020905b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190600101908083116100f0575b5050505050905090565b6020604051908101604052806000815250905600a165627a7a723058203907f4fdc759d8d37cd07ecaf30d27c04681c02078e0259ffed8805456f813080029",
+  "sourceMap": "47:198:0:-;;;103:1;89:16;;;;;;;;;;;;;;;;;;;;;;;;70:35;;;;;;;;;;;;;:::i;:::-;;110:61;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;161:5;152:6;:14;;;;;;;;;;;;:::i;:::-;;110:61;47:198;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "47:198:0:-;;;;;;;;;;;;;;;;;;;;;;;;175:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;175:68:0;208:9;;:::i;:::-;232:6;225:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;175:68;:::o;47:198::-;;;;;;;;;;;;;;;:::o",
+  "source": "/// @title SubLevelC\npragma solidity ^0.4.17;\n\ncontract SubLevelC {\n  address[] owners = new address[](1);\n\n  function SubLevelC(address[] owner) {\n    owners = owner;\n  }\n\n  function returnOwners() returns (address[]) {\n    return owners;\n  }\n}\n",
+  "sourcePath": "/Users/rob/Desktop/crypto-research/ethereum/pocs/poc1/contracts/SubLevelC.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/rob/Desktop/crypto-research/ethereum/pocs/poc1/contracts/SubLevelC.sol",
+      "exportedSymbols": {
+        "SubLevelC": [
+          30
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".17"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "21:24:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            30
+          ],
+          "name": "SubLevelC",
+          "scope": 31
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "owners",
+              "payable": false,
+              "scope": 30,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "internal",
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address[] storage ref",
+              "value": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ],
+                  "length": null,
+                  "type": "address[] storage pointer"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 2,
+                    "name": "ElementaryTypeName",
+                    "src": "70:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "31",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "number",
+                      "type": "int_const 1",
+                      "value": "1"
+                    },
+                    "id": 3,
+                    "name": "Literal",
+                    "src": "78:1:0"
+                  }
+                ],
+                "id": 3,
+                "name": "ArrayTypeName",
+                "src": "70:9:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ],
+                  "argumentTypes": null,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "isStructConstructorCall": false,
+                  "lValueRequested": false,
+                  "names": [
+                    null
+                  ],
+                  "type": "address[] memory",
+                  "type_conversion": false
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        }
+                      ],
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "type": "function (uint256) pure returns (address[] memory)"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "address[] storage pointer"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "type": "address"
+                            },
+                            "id": 4,
+                            "name": "ElementaryTypeName",
+                            "src": "93:7:0"
+                          }
+                        ],
+                        "id": 5,
+                        "name": "ArrayTypeName",
+                        "src": "93:9:0"
+                      }
+                    ],
+                    "id": 6,
+                    "name": "NewExpression",
+                    "src": "89:13:0"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "31",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "number",
+                      "type": "int_const 1",
+                      "value": "1"
+                    },
+                    "id": 7,
+                    "name": "Literal",
+                    "src": "103:1:0"
+                  }
+                ],
+                "id": 8,
+                "name": "FunctionCall",
+                "src": "89:16:0"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 68,
+                "name": "Block",
+                "src": "93:6:2"
+              }
+            ],
+            "id": 9,
+            "name": "VariableDeclaration",
+            "src": "70:35:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "SubLevelC",
+              "payable": false,
+              "scope": 30,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "owner",
+                      "scope": 20,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address[] memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "address[] storage pointer"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "type": "address"
+                            },
+                            "id": 10,
+                            "name": "ElementaryTypeName",
+                            "src": "129:7:0"
+                          }
+                        ],
+                        "id": 11,
+                        "name": "ArrayTypeName",
+                        "src": "129:9:0"
+                      }
+                    ],
+                    "id": 12,
+                    "name": "VariableDeclaration",
+                    "src": "129:15:0"
+                  }
+                ],
+                "id": 13,
+                "name": "ParameterList",
+                "src": "128:17:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 14,
+                "name": "ParameterList",
+                "src": "146:0:0"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address[] storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 9,
+                              "type": "address[] storage ref",
+                              "value": "owners"
+                            },
+                            "id": 15,
+                            "name": "Identifier",
+                            "src": "152:6:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 12,
+                              "type": "address[] memory",
+                              "value": "owner",
+                              "isConstant": false,
+                              "isInlineArray": true,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false
+                            },
+                            "id": 16,
+                            "name": "Identifier",
+                            "src": "161:5:0",
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "307834386464306463616563653865626465306135663265376136396231303832636433313863636431",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 415977001699854148206380858514477942946752154833",
+                                  "value": "0x48dd0dcaece8ebde0a5f2e7a69b1082cd318ccd1"
+                                },
+                                "id": 12,
+                                "name": "Literal",
+                                "src": "144:42:0"
+                              }
+                            ]
+                          }
+                        ],
+                        "id": 17,
+                        "name": "Assignment",
+                        "src": "152:14:0"
+                      }
+                    ],
+                    "id": 18,
+                    "name": "ExpressionStatement",
+                    "src": "152:14:0"
+                  }
+                ],
+                "id": 19,
+                "name": "Block",
+                "src": "146:25:0"
+              }
+            ],
+            "id": 20,
+            "name": "FunctionDefinition",
+            "src": "110:61:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "returnOwners",
+              "payable": false,
+              "scope": 30,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 21,
+                "name": "ParameterList",
+                "src": "196:2:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 29,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address[] memory",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "address[] storage pointer"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "type": "address"
+                            },
+                            "id": 22,
+                            "name": "ElementaryTypeName",
+                            "src": "208:7:0"
+                          }
+                        ],
+                        "id": 23,
+                        "name": "ArrayTypeName",
+                        "src": "208:9:0"
+                      }
+                    ],
+                    "id": 24,
+                    "name": "VariableDeclaration",
+                    "src": "208:9:0"
+                  }
+                ],
+                "id": 25,
+                "name": "ParameterList",
+                "src": "207:11:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 25
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 9,
+                          "type": "address[] storage ref",
+                          "value": "owners"
+                        },
+                        "id": 26,
+                        "name": "Identifier",
+                        "src": "232:6:0"
+                      }
+                    ],
+                    "id": 27,
+                    "name": "Return",
+                    "src": "225:13:0"
+                  }
+                ],
+                "id": 28,
+                "name": "Block",
+                "src": "219:24:0"
+              }
+            ],
+            "id": 29,
+            "name": "FunctionDefinition",
+            "src": "175:68:0"
+          }
+        ],
+        "id": 30,
+        "name": "ContractDefinition",
+        "src": "47:198:0"
+      }
+    ],
+    "id": 31,
+    "name": "SourceUnit",
+    "src": "21:225:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {
+    "4447": {
+      "events": {},
+      "links": {},
+      "address": "0x345ca3e014aaf5dca488057592ee47305d9b3e10"
+    }
+  },
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-03T23:09:40.423Z"
+}

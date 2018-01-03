@@ -1,0 +1,129 @@
+{
+  "contractName": "DistributorC",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a7230582024f61e6777941475c441d269a66f165ff97b89f4a8c892f5b1d34f73aa8405420029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a7230582024f61e6777941475c441d269a66f165ff97b89f4a8c892f5b1d34f73aa8405420029",
+  "sourceMap": "51:58:0:-;;;77:30;;;;;;;;51:58;;;;;;",
+  "deployedSourceMap": "51:58:0:-;;;;;",
+  "source": "/// @title DistributionC\npragma solidity ^0.4.17;\n\ncontract DistributorC {\n  function DistributorC() {\n\n  }\n}\n",
+  "sourcePath": "/Users/rob/Desktop/crypto-research/ethereum/pocs/poc1/contracts/DistributorC.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/rob/Desktop/crypto-research/ethereum/pocs/poc1/contracts/DistributorC.sol",
+      "exportedSymbols": {
+        "DistributorC": [
+          6
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".17"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "25:24:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            6
+          ],
+          "name": "DistributorC",
+          "scope": 7
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "DistributorC",
+              "payable": false,
+              "scope": 6,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2,
+                "name": "ParameterList",
+                "src": "98:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 3,
+                "name": "ParameterList",
+                "src": "101:0:0"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 4,
+                "name": "Block",
+                "src": "101:6:0"
+              }
+            ],
+            "id": 5,
+            "name": "FunctionDefinition",
+            "src": "77:30:0"
+          }
+        ],
+        "id": 6,
+        "name": "ContractDefinition",
+        "src": "51:58:0"
+      }
+    ],
+    "id": 7,
+    "name": "SourceUnit",
+    "src": "25:85:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-03T21:54:02.205Z"
+}
