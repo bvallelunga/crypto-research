@@ -16,7 +16,7 @@ contract SubLevelC {
     payoutAddresses = initialPayoutAddresses;
   }
 
-  function addOwner(address payoutAddress)
+  function addPayoutAddress(address payoutAddress)
   isOwner()
   {
     payoutAddresses.push(payoutAddress);
