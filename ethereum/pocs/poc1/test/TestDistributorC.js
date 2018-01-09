@@ -12,11 +12,11 @@
 //     assert.equal(await distributorC.dopplerFoundation.call(), accounts[0])
 //   })
 //
-//   it('adds task', async function(){
-//     await distributorC.addTask(1, address1, address2, address3, 30, 30, 30)
-//     const resp = await distributorC.getTask.call(1)
-//     assert.deepEqual([resp[0], resp[1], resp[2], resp[3].c[0], resp[4].c[0], resp[5].c[0], resp[6]], [address1, address2, address3, 30, 30, 30, true])
-//   })
+  // it('adds task', async function(){
+  //   await distributorC.addTask(1, address1, address2, address3, 30, 30, 30)
+  //   const resp = await distributorC.getTask.call(1)
+  //   assert.deepEqual([resp[0], resp[1], resp[2], resp[3].c[0], resp[4].c[0], resp[5].c[0], resp[6]], [address1, address2, address3, 30, 30, 30, true])
+  // })
 //
 //   it('adds payment', async function () {
 //     await distributorC.addPayment(1,1, { from: accounts[0], value: 100, gas: 100000 })
