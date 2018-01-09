@@ -20,3 +20,7 @@
 5. Each contract within the task, which we will label *subLevelContracts*, distribute funds to the registered individual wallets, which will be stored in an array on each contract.
 
 ## How to run?
+```truffle develop```<br>
+```> compile```<br>
+```> migrate```<br>
+```> test```
