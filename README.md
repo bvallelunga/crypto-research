@@ -6,3 +6,4 @@ conclusion of our tests.
 Blockchain | Testing Conclusion
 ------------ | -------------
 Ethereum | PASS
+Stellar | PASS
