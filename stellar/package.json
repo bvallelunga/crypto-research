@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test/test-actions.js --exit --timeout=30000"
+    "test": "mocha test/test-actions.js --exit --timeout=30000",
+    "simulate": "node simulation/costs.js"
   },
   "author": "",
   "license": "ISC",
