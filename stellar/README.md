@@ -71,10 +71,7 @@ This is a very reasonable setup. Based on testing, the following observations we
 5. Very easy to create own token
 ```
 
-#### Money Considerations:
+#### Simulate Price:
 ```
-Fee/tx = 0.00004 * $0.45 = $0.00018
-So:
-  1000   tx fee's = $0.18
-  100000 tx fee's = $18
+  npm run simulate -- numPredictions=<NUMBER_OF_PREDICTIONS_TO_SIMULATE> predictionPrice=<PRICE_IN_XLM> numToPay=<NUMBER_OF_PEOPLE_TO_PAY>
 ```
