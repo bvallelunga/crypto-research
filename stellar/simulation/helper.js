@@ -11,7 +11,7 @@ StellarSdk.Network.useTestNetwork();
  * @returns { Bool }
  */
 
-async function sendLumensNTimes(senderSK, receiverPK, numPayments) {
+async function sendLumensNTimes(senderSK, receiverPK, numPayments, predictionPrice) {
   // Get the user's account
   const sourceKeypair = StellarSdk.Keypair.fromSecret(senderSK);
   const account = await server.loadAccount(sourceKeypair.publicKey());
@@ -20,7 +20,7 @@ async function sendLumensNTimes(senderSK, receiverPK, numPayments) {
   let transaction = new StellarSdk.TransactionBuilder(account)
 
   // Figure out how much everyone gets
-  const perPersonPaymentAmount = 0.0024/numPayments
+  const perPersonPaymentAmount = predictionPrice/numPayments
 
   for (let i = 0; i < numPayments; i ++) {
     transaction = transaction.addOperation(StellarSdk.Operation.payment({
