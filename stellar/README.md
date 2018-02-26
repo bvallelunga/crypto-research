@@ -27,7 +27,7 @@ Operation 4: Pay person E
 Signature Person A
 ```
 
-TRANSACTION B (Sequence #4)
+TRANSACTION B (Sequence X+1)
 ```
 Operation 1: Pay person B
 Operation 2: Pay person C
